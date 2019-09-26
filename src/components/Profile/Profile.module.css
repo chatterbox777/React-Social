@@ -1,0 +1,19 @@
+.content {
+  grid-area: c;
+  }
+
+  .content_bg img {
+    width: 100%;
+    height: 200px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .content_bottom {
+    background: #233625;
+    margin-top: 5px;
+  }
+
+.item.active {
+  color: yellow;
+}
