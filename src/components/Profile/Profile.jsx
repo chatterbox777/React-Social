@@ -5,7 +5,7 @@ import MyPosts from './MyPosts/MyPosts';
 
 const Profile = () => {
     return (
-      <div>
+      <div className = {classTags.all_items}>
         <div className = {classTags.content_bg}>
           <img src = 'https://blog.allo.ua/wp-content/uploads/2019/06/Cyberpunk2077.jpg'></img>
         </div>

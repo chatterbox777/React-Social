@@ -1,3 +1,7 @@
+.all_items {
+  padding: 20px;
+}
+
 .content {
   grid-area: c;
   }
@@ -13,6 +17,9 @@
     background: #233625;
     margin-top: 5px;
   }
+.item {
+  margin-bottom: 20px;
+}
 
 .item.active {
   color: yellow;
