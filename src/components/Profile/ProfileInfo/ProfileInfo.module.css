@@ -1,0 +1,14 @@
+.content_bg img {
+    width: 100%;
+    height: 200px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .item {
+    margin-bottom: 20px;
+  }
+  
+  .item.active {
+    color: yellow;
+  }

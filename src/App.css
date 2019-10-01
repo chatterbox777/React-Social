@@ -1,5 +1,7 @@
 body {
-  background: #e5daeb;
+  background-image: url(images/main_wallpaper.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .app-wrapper {
