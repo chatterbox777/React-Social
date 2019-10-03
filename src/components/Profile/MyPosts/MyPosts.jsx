@@ -4,6 +4,17 @@ import Post from "./Post/Post";
 import Like from "./Post/like.jsx";
 
 const MyPosts = () => {
+
+   let posts = [
+      {id: 1, message: "Hello, bitch, why are you  alive?" , likeCounts: 22}, 
+      {id: 2, message: "Sorry, its not adress to you", likeCounts: 33}
+      
+    ];
+
+
+   let postsElement = posts.map ( post => <Post message ={post.message} likeCounts ={post.likeCounts}/> );
+
+
    return (
       <div>
          <div className={classTags.item}> <h3>My Posts</h3></div>
@@ -17,10 +28,7 @@ const MyPosts = () => {
 
          </div>
          <div className={classTags.Posts}>
-            <Post message="Hello, bitch, why are you  alive?" />
-            <Like count="37" />
-            <Post message="Sorry, its not adress to you" />
-            <Like count="20" />
+           { postsElement }
          </div>
       </div>
    );
