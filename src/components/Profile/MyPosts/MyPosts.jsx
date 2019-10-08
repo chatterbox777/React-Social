@@ -1,19 +1,21 @@
 import React from "react";
 import classTags from "./MyPosts.module.css";
 import Post from "./Post/Post";
-import Like from "./Post/like.jsx";
 
 const MyPosts = () => {
 
    let posts = [
-      {id: 1, message: "Hello, bitch, why are you  alive?" , likeCounts: 22}, 
-      {id: 2, message: "Sorry, its not adress to you", likeCounts: 33}
+      {id: 1, message: "Hello, bitch, why are you  alive?", likeCount: 11}, 
+      {id: 2, message: "Sorry, its not adress to you", likeCount: 76},
+      {id:3, message: 'Fuck you', likeCount: 120}
       
     ];
 
+  
+  
 
-   let postsElement = posts.map ( post => <Post message ={post.message} likeCounts ={post.likeCounts}/> );
-
+   let postsElement = posts.map ( post => <Post message ={post.message} likeCount = {post.likeCount} /> );
+ 
 
    return (
       <div>
@@ -28,7 +30,7 @@ const MyPosts = () => {
 
          </div>
          <div className={classTags.Posts}>
-           { postsElement }
+         { postsElement }
          </div>
       </div>
    );

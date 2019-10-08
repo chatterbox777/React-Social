@@ -22,3 +22,6 @@
   height: 40px;
   border-radius: 50%;
 }
+.item span {
+  color: red;
+}

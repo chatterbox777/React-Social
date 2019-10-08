@@ -1,25 +1,9 @@
 import React from "react";
 import classTags from "./Dialogs.module.css";
-import {NavLink} from "react-router-dom";
-import { ADDRGETNETWORKPARAMS } from "dns";
+import DialogItem from '../Dialogs/DialogItem/DialogItem';
+import Message from '../Dialogs/Message/Message';
 
 
-const DialogItem = (props) => {
-
-    return (
-        <div className={classTags.dialog + ' ' + classTags.active}>
-        <NavLink to = {'/Dialogs/' + props.id}>{props.name}</NavLink>
-        </div>
-    );
-};
-
-const Message = (props) => {
-    return (
-        <div className={classTags.message}>
-             {props.text}
-        </div>
-    );
-};
 
 
 
@@ -50,7 +34,7 @@ let messagesElement = messages.map ( message => <Message text = {message.message
       <div className={classTags.dialogs_items}>
 
       { dialogsElements }
-      
+
       </div>
       <div className={classTags.messages}>
 
