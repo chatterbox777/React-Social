@@ -2,19 +2,10 @@ import React from "react";
 import classTags from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
-const MyPosts = () => {
+const MyPosts = (props) => {
 
-   let posts = [
-      {id: 1, message: "Hello, bitch, why are you  alive?", likeCount: 11}, 
-      {id: 2, message: "Sorry, its not adress to you", likeCount: 76},
-      {id:3, message: 'Fuck you', likeCount: 120}
-      
-    ];
-
-  
-  
-
-   let postsElement = posts.map ( post => <Post message ={post.message} likeCount = {post.likeCount} /> );
+   let postsElement = 
+      props.posts.map ( post => <Post message ={post.message} likeCount = {post.likeCount} /> );
  
 
    return (
