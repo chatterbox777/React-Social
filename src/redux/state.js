@@ -16,10 +16,10 @@ import { statement } from "@babel/template";
     dialogsPage: {
 
         dialogs: [
-            {id: 1, name: 'Artyom'}, 
-            {id: 2, name: 'Vasiliy'},
-            {id: 3, name: 'Dmitriy'},
-            {id: 4, name: 'Nik'}
+            {id: 1, name: 'Artyom', url: 'https://klike.net/uploads/posts/2019-03/1551511801_1.jpg'}, 
+            {id: 2, name: 'Vasiliy', url: 'https://photostocky.ru/wp-content/uploads/2019/02/krutye-foto-i-kartinki-v-vk-1.jpg'},
+            {id: 3, name: 'Dmitriy', url: 'https://lizaalert.org/forum/download/file.php?avatar=10822_1440823850.jpg'},
+            {id: 4, name: 'Nik', url: 'https://klike.net/uploads/posts/2019-03/1551511804_3.jpg'}
           ],
 
         messages: [
