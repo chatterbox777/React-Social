@@ -12,7 +12,7 @@ const Profile = (props) => {
 
       <div className = {classTags.all_items}>
         <ProfileInfo />
-        <MyPosts posts = {props.posts} />
+        <MyPosts posts = {props.state.posts} />
         </div>
     );
 }
