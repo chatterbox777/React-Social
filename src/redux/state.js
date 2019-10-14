@@ -28,9 +28,24 @@ import { statement } from "@babel/template";
             {id: 3, message: 'nothing interesting , AND YOU?'},
             {id: 4, message: 'IM TOOOOO'}
           ]
-    }
+    },
     
+    sitebarPage: {
 
+    }
   }
+
+
+export let addPost = (postMessage) => {
+    debugger;
+    let newPost = {
+      id:5,
+      message: postMessage,
+      likeCount: 0
+    };
+
+    state.profilePage.posts.push(newPost);
+}
+
 
   export default state;

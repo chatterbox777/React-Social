@@ -10,6 +10,7 @@ const Message = (props) => {
         <div className={classTags.message}>
              {props.text}
         </div>
+       
     );
 };
 
