@@ -1,4 +1,5 @@
 import { statement } from "@babel/template";
+import { rerenderEntireTree } from "../render";
 
   let state = {
 
@@ -7,7 +8,9 @@ import { statement } from "@babel/template";
             {id: 1, message: "Hello, whats happend to you last night?", likeCount: 11}, 
             {id: 2, message: "Sorry, its not adress to you", likeCount: 76},
             {id:3, message: 'omg', likeCount: 120}
-          ]
+          ],
+
+        newPostText: 'chatterbox777'
     
         
     },
@@ -35,17 +38,26 @@ import { statement } from "@babel/template";
     }
   }
 
+  window.state = state;
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
     debugger;
     let newPost = {
       id:5,
-      message: postMessage,
+      message: state.profilePage.newPostText,
       likeCount: 0
     };
 
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = '';
+    rerenderEntireTree(state);
 }
 
+
+export let updateNewPostText = (newText) => {
+
+  state.profilePage.newPostText = newText;
+  rerenderEntireTree(state);
+}
 
   export default state;
