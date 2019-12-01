@@ -10,7 +10,7 @@ const Profile = (props) => {
 
       <div className = {classTags.all_items}>
         <ProfileInfo />
-        <MyPostsContainer store = {props.store}  />
+        <MyPostsContainer  />
         </div>
     );
 }

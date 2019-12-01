@@ -21,12 +21,10 @@ const App = (props) => {
        <div className = 'app-wrapper-content'>
 
        <Route path = '/Dialogs'
-              render = { () => <DialogsContainer
-                     store = {props.store} /> } />
+              render = { () => <DialogsContainer /> } />
 
        <Route path = '/Profile'
-              render = { () => <Profile store = {props.store}
-              /> } />
+              render = { () => <Profile /> } />
 
        <Route path = '/News' render = { () => <News />} />
        <Route path = '/Music' render = { () => <Music />} />
