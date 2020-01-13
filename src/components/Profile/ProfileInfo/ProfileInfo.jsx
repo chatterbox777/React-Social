@@ -1,7 +1,13 @@
 import React from "react";
 import classTags from "./ProfileInfo.module.css";
+import Preloader from "../../common/Preloader/Preloader";
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
+
+if (!props.profile) {
+  return <Preloader />
+}
+
   return (
     <div>
       <div className={classTags.content_bg}>
@@ -9,6 +15,9 @@ const ProfileInfo = () => {
       </div>
       <div>
         <div className={`${classTags.item} ${classTags.active}`}>
+          <img src= {props.profile.photos.large} /> <br/>
+          <span>{props.profile.aboutMe}</span>
+          <br/>
           ava + description
         </div>
       </div>
