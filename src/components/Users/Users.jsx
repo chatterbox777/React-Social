@@ -56,7 +56,7 @@ let Users = (props) => {
                 axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {}, {
                     withCredentials: true,
                     headers: {
-                        'API-KEY': '2fd4ffe9-d26d-45b2-8194-7b74d57a4656'
+                        'API-KEY': '1d340cda-60a5-49de-bf6a-5cfc74d67d0a'
                     }
                 })
                 .then(response => {
