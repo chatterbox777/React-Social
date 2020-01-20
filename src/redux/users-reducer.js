@@ -138,5 +138,23 @@ export const follow = (userId) => { // thunkCreator
  }
  }
 
+ export const getProfile = (userId) => { // thunkCreator
+    return (dispatch) => {
+        dispatch(toggleFollowingProgress(true, userId));
+
+        usersAPI.getProfile(userId)
+        .then(response => {
+
+            this.props.setUserProfile(response.data);
+
+           if (response.data.resultCode === 0) {
+            dispatch(unfollowSuccess(userId));
+           }
+           dispatch(toggleFollowingProgress(false, userId));
+            
+        });
+ }
+ }
+
 
 export default usersReducer;
