@@ -37,7 +37,7 @@ let onNewMessageChange = (e) => {
   props.updateNewMessageBody(body);
 }
 
-if (!props.isAuth === false) return <Redirect to = {'/Login'} />;
+if (!props.isAuth) return <Redirect to = {'/Login'} />;
 
   return (
     <div className={classTags.dialogs}>
