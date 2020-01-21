@@ -3,6 +3,7 @@ import classTags from "./Dialogs.module.css";
 import DialogItem from '../Dialogs/DialogItem/DialogItem';
 import Message from '../Dialogs/Message/Message';
 import { updateNewMessageBodyCreator, sendMessageCreator } from "../../redux/dialogs-reducer";
+import { Redirect } from "react-router-dom";
 
 
 
@@ -35,6 +36,8 @@ let onNewMessageChange = (e) => {
   let body = e.target.value;
   props.updateNewMessageBody(body);
 }
+
+if (!props.isAuth === false) return <Redirect to = {'/Login'} />;
 
   return (
     <div className={classTags.dialogs}>

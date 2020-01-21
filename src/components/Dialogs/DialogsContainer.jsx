@@ -1,13 +1,13 @@
 import React from "react";
 import { updateNewMessageBodyCreator, sendMessageCreator } from "../../redux/dialogs-reducer";
 import Dialogs from "./Dialogs";
-import store from "../../redux/redux-store";
 import { connect } from "react-redux";
 
 
 let mapStateToProps = (state) => {
   return {
-      dialogsPage: state.dialogsPage
+      dialogsPage: state.dialogsPage,
+      isAuth: state.auth.isAuth
   }
 }
 
