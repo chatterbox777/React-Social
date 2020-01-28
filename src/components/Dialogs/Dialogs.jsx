@@ -5,6 +5,7 @@ import Message from '../Dialogs/Message/Message';
 import { updateNewMessageBodyCreator, sendMessageCreator } from "../../redux/dialogs-reducer";
 import { Redirect } from "react-router-dom";
 import { Field, reduxForm } from "redux-form";
+import AddMessageForm from "./AddMessageForm/AddMessageForm";
 
 
 
@@ -49,25 +50,11 @@ if (!props.isAuth) return <Redirect to = {'/Login'} />;
 <div>{messagesElement}</div>
   
       </div>
-      <AddMessageFormRedux onSubmit = {addNewMessage} />
+      <AddMessageForm onSubmit = {addNewMessage} />
       
     </div>
   );
 };
 
-const AddMessageForm = (props) => {
-  return (
-    <form onSubmit = {props.handleSubmit}> 
-  <div><button>Add message</button></div>
-      <div>
-        <Field component = 'textarea' name = 'newMessageBody' placeholder = 'Enter your message' />
-       
-        
-        </div>
-  </form>
-  )
-}
-
-const AddMessageFormRedux = reduxForm({form: 'dialogAddMessageForm'})(AddMessageForm);
 
 export default Dialogs;
