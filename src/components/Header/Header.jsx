@@ -7,8 +7,9 @@ const Header = (props) => {
     <header className = {classTags.header}>
     <img src = 'https://placeit-assets.s3-accelerate.amazonaws.com/landing-pages/logo-maker-landing-page-v2/Esport-logo-maker-min.png'></img>
     <div className = {classTags.loginBlock}>
-      {props.isAuth ? props.login :
-    <NavLink to = '/Login'>Login</NavLink> }
+      {props.isAuth 
+      ? <div> {props.login} - <button onClick = {props.logout}>Log out</button></div>  
+      : <NavLink to = '/Login'>Login</NavLink> }
     </div>
   </header>
     );
