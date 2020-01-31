@@ -9,3 +9,23 @@ border: 2px solid red;
 .formControl.error span {
    color: red;
 } 
+
+
+button:hover {
+
+   border: 2px solid lightslategray;
+}
+
+
+.formSummaryError {
+   display: inline-block;
+   padding: 5px;
+   color: red;
+   margin: auto;
+   text-align: center;
+
+}
+
+.formSummaryError:hover {
+   border: 2px solid red;
+}
