@@ -1,10 +1,8 @@
 import React from 'react';
 import Profile from './Profile';
-import * as axios from 'axios';
 import {connect} from 'react-redux';
 import {getUserProfile, getStatus, updateStatus } from '../../redux/profile-reducer'
 import { withRouter, Redirect } from 'react-router-dom';
-import { withAuthRedirect } from '../../hoc/withAuthRedirect';
 import { compose } from 'redux';
 
 
@@ -14,6 +12,9 @@ componentDidMount() {
     let userId = this.props.match.params.userId;
     if (!userId) {
         userId = this.props.authorizedUserId;
+        if (!userId) {
+            this.props.history.push('/Login');
+        }
     }
             this.props.getUserProfile(userId);
      // setTimeout(() => {
