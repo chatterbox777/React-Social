@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classTags from "./ProfileInfo.module.css";
 
 
@@ -11,6 +11,9 @@ const activateEditMode = () => {
   setEditMode(true);
 }
 
+useEffect( () => {
+  setStatus(props.status);
+}, [props.status] );
 
 const deactivateEditMode = () => { 
   setEditMode(false);
